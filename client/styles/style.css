@@ -1,3 +1,17 @@
 .title {
   font: 2em "Open Sans", sans-serif;
 }
+
+.nav {
+  background-color: yellow;
+  padding: 5px
+}
+.overview {
+  background-color: green;
+  padding: 5px
+}
+
+.projects {
+  background-color: blue;
+  padding: 5px
+}
