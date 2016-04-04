@@ -1,9 +1,9 @@
-angular.module('myProjects', ['ngRoute']).
+angular.module('myProjects', ['myProjects.overview','ngRoute']).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.
     when('/overview', {
       templateUrl: 'app/overview/overview.html',
-      // controller: 'overviewController'
+      controller: 'overviewController'
     }).
     when('/projects', { // TODO: add :projetID
       templateUrl: 'app/projects/projects.html',
