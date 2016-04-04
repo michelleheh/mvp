@@ -3,19 +3,19 @@ config(['$routeProvider', function($routeProvider) {
   $routeProvider.
     when('/overview', {
       templateUrl: 'app/overview/overview.html',
-      controller: 'overviewController'
+      // controller: 'overviewController'
     }).
     when('/projects', { // TODO: add :projetID
       templateUrl: 'app/projects/projects.html',
-      controller: 'projectsController'
+      // controller: 'projectsController'
     }).
     when('/tasks', {
       templateUrl: 'app/tasks/tasks.html',
-      controller: 'tasksController'
+      // controller: 'tasksController'
     }).
     when('/notes', {
       templateUrl: 'app/notes/notes.html',
-      controller: 'notesController' 
+      // controller: 'notesController' 
     }).
     otherwise({
       redirectTo: '/overview'
