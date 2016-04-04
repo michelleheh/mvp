@@ -18,27 +18,43 @@ Once the project moves into development, the press release can be used as a touc
  
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
+  my personal project manager
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  You are able to keep track of the progress personal projects (wedding planning, kitchen remodeling, building a drome, learn a skill) you are currently working on. Set reminders and gather resources to help you stay on track.
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  - help plan out milestones for completing a project by setting up deadlines
+  - overview of projecet progress
+  - set reminders to keep progress on track
+  - keep all your project related resources in one place
+  - future features: working with other people
 
 ## Problem ##
   > Describe the problem your product solves.
+  - current todo lists are largly scattered, and hard to keep track of if a tacks spans a long period of time or require more than one person to complete.
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
+  - by keeping tasks in a project, the app will help relate small tasks to a larger project
+  - by providing a timeline interface, the app provides a good overview of the tasks to be completed
+  - by enableing different users to a specific project, the manager of the project can delegate to multiple people
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
+  "Let my personal project manager help you manage your next dream."
 
 ## How to Get Started ##
   > Describe how easy it is to get started.
+  - loging with your google account
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  "it's great that I can see all my dress ideas for my wedding and keeping track of appointments in one place!"
 
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
+  "get started now!"
+
