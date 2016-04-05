@@ -1,6 +1,37 @@
 var data = {};
 
-data.projects = ['wedding planning', 'kitchen remodeling', 'band performance', 'building a drome'];
+data.projects = [
+  {
+    projectName: 'wedding planning',
+    startingDate: '2016-02-01',
+    finishDate: '2016-02-03',
+    tasks: [
+      {
+        taskName: 'pick a dress',
+        notes: ['text1', 'text2', 'text2']
+      },
+      {
+        taskName: 'design scheme',
+        notes: ['text1', 'text2', 'text2']
+      },
+    ]
+  },
+  {
+    projectName: 'band performance',
+    startingDate: '2016-02-01',
+    finishDate: '2015-02-03',
+    tasks: [
+      {
+        taskName: 'pick a dress',
+        notes: ['text1', 'text2', 'text2']
+      },
+      {
+        taskName: 'design scheme',
+        notes: ['text1', 'text2', 'text2']
+      },
+    ]
+  },
+];
   // {
   //   user: 'Michelle',
   //   projects: [

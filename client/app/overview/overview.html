@@ -20,18 +20,19 @@
   <div class="overview">
     <h2>Overview</h2>
 
-    <form name="addProject">
-      <input type="text" ng-model="projectName">Project Name</input>
-      <input type="date" ng-model="startingDate">Starting Date</input>
-      <input type="date" ng-model="finishDate">Finish Date</input>
+    <form name="addProject" ng-submit="addNewProject()" novalidate>
+      <input type="text" ng-model="project.projectName">Project Name</input>
+      <input type="date" ng-model="project.startingDate">Starting Date</input>
+      <input type="date" ng-model="project.finishDate">Finish Date</input>
       <button>add project</button>
     </form>
 
     <div> 
       <ul name="projectList">
-        <li ng-repeat="project in projects track by $index">{{project}}
-          <p>Starting Date</p>
-          <p>Finish Date</p>
+        <li ng-repeat="project in projects track by $index">
+          <p>{{project.projectName}}</p>
+          <p>Starting Date: {{project.startingDate}}</p>
+          <p>Finish Date: {{project.finishDate}}</p>
         </li>
       </ul>
     </div>
@@ -40,8 +41,7 @@
 </div>
 
 <pre>
-{{projects}}
-{{projectName}}
-{{startingDate}}
-{{finishDate}}
+{{project.projectName}}
+{{project.startingDate}}
+{{project.finishDate}}
 </pre>
