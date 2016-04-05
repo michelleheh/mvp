@@ -1,23 +1,55 @@
 <div id="container">
-<!-- Navigation Panel -->
-  <nav class="navigation">
-    <ul>
+  <!-- Navigation Panel -->
+  <nav class="navbar navbar-default">
+    <ul class="nav navbar-nav">
       <li>
-        <a href="#/overview">overview</a>
+        <a href="#/overview">Overview</a>
       </li>
       <li>
-        <a href="#/project">project</a>
+        <a href="#/project">Project</a>
+      </li>
+      <li class="active">
+        <a href="#/task">Task</a>
       </li>
       <li>
-        <a class="selected" href="#/tasks">task</a>
-      </li>
-      <li>
-        <a href="#/note">note</a>
+        <a href="#/note">Note</a>
       </li>
     </ul>
   </nav>
-  <!-- Tasks Panel -->
+  <!-- Task Panel -->
   <div class="task">
-    <h2>Tasks</h2>
+
+    <form class="navbar-form" name="addNote" ng-submit="addNewNote()" novalidate>
+      <label>Note Title: </label>
+      <input type="text" class="form-control" ng-model="note.noteTitle">
+      <label>Details: </label>
+      <input type="text" class="form-control" ng-model="note.text">
+      <label>URL: </label>
+      <input type="text" class="form-control" ng-model="note.text">
+      <button type="submit" class="btn btn-default">Add Note</button>
+    </form>
+
+    <!-- <div class="row">
+      <div class="col-sm-6 col-md-3" name="projectList">
+        <div class="thumbnail" ng-repeat="project in projects track by $index">
+          <div class="caption">
+            <a href="#/project"  ng-click="setCurrentProject(project.projectName)">{{project.projectName}}</a>
+            <p>Starting Date: {{project.startTime}}</p>
+            <p>Finish Date: {{project.endTime}}</p>
+          </div>
+        </div>
+      </div>
+    </div> -->
   </div>
+
+  <pre>
+    <div>
+      {{projects}}
+      
+    </div>
+      {{project.projectName}}
+      {{project.startTime}}
+      {{project.endTime}}
+  </pre>
+
 </div>
