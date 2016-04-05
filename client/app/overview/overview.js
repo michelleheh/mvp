@@ -12,4 +12,6 @@ angular.module('myProjects.overview', [])
       window.localStorage.currentProject = projectName; // TODO: change to express-session
     };
 
+    makeGanttChart('Projects Overview', data.projects);
+
   }]);
