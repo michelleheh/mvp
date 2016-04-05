@@ -4,25 +4,29 @@ angular.module('myProjects.task', [])
   $scope.notes = data.notes; // TODO setup request to server
   
   //default values in form
-  $scope.note = {
-    noteTitle: "New Note Here",
-    text: "detailed Notes",
-    url: "http://www.safestkitts.org/uploads/1/4/1/0/14108477/s986986427336998704_p5_i2_w347.jpeg"
+  var defaultNote = {
+    noteTitle: "Corgis",
+    text: "Corgi puppies are the best",
+    url: "http://pembroke-welshcorgi.com/uploads/3/4/1/0/34101140/4066212_orig.jpg"
   };
 
+  $scope.note = defaultNote;
+
   $scope.addNewNote = function() {
-    console.log('adding a new note');
 
-  //   var newNote = {
-  //     noteTitle: $scope.project.noteTitle,
-  //     text: $scope.project.text,
-  //     url: $scope.project.url
-  //   };
 
-    // add note to page
+    var newNote = {
+      noteTitle: $scope.note.noteTitle,
+      text: $scope.note.text,
+      url: $scope.note.url
+    };
 
-    // post to server
-    // Notes.addNewNote(JSON.stringify(newNote));
+  // add note to page
+    console.log('adding a new note: ', newNote);
+    $scope.notes.unshift(newNote);
+    $scope.note = defaultNote;
+  // TODO: post to server
+  // Notes.addNewNote(JSON.stringify(newNote));
 
   };
 

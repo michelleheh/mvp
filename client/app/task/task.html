@@ -20,31 +20,35 @@
   <div class="task">
 
     <form class="navbar-form" name="addNote" ng-submit="addNewNote()" novalidate>
-      <label>Note Title: </label>
+      <label>Title: </label>
       <input type="text" class="form-control" ng-model="note.noteTitle">
       <label>Details: </label>
       <input type="text" class="form-control" ng-model="note.text">
       <label>URL: </label>
-      <input type="text" class="form-control" ng-model="note.text">
+      <input type="text" class="form-control" ng-model="note.url">
       <button type="submit" class="btn btn-default">Add Note</button>
     </form>
 
-    <!-- <div class="row">
-      <div class="col-sm-6 col-md-3" name="projectList">
-        <div class="thumbnail" ng-repeat="project in projects track by $index">
-          <div class="caption">
-            <a href="#/project"  ng-click="setCurrentProject(project.projectName)">{{project.projectName}}</a>
-            <p>Starting Date: {{project.startTime}}</p>
-            <p>Finish Date: {{project.endTime}}</p>
+    <!-- Note Thumnails-->
+    <div class="row">
+      <div class="col-sm-6 col-md-3" name="noteList">
+        <div ng-repeat="note in notes track by $index">
+          <div class="thumbnail">
+            <!-- <a href="#/project"  ng-click="setCurrentProject(project.projectName)">{{project.projectName}}</a> -->
+            <img src={{note.url}}>
+            <h4>{{note.noteTitle}}</h4>
+            <p>{{note.text}}</p>
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
+
   </div>
 
   <pre>
     <div>
       {{notes}}
+
     </div>
   </pre>
 
