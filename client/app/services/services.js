@@ -5,7 +5,7 @@ angular.module('myProjects.services', [])
     console.log('fired');
     $http({
       method: 'GET', 
-      url: '/'
+      url: 'http://localhost:3000/'
     }).then(function(res) {
       console.log(res);
     });    
@@ -14,5 +14,5 @@ angular.module('myProjects.services', [])
   return {
     getTest: getTest
   };
-  
+
 });
