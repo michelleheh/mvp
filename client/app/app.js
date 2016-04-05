@@ -1,4 +1,5 @@
 angular.module('myProjects', [
+  'myProjects.services',
   'myProjects.overview',
   'myProjects.project',
   'ngRoute'
