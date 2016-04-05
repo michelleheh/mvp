@@ -1,7 +1,13 @@
 angular.module('myProjects.overview', [])
   .controller('overviewController', ['$scope', 'Projects', function($scope, Projects) {
 
-    $scope.projects = data.projects;
+    $scope.projects = data.projects; // TODO setup request to server
+    //default values in form
+    $scope.project = {
+      projectName: "New Project Here",
+      startTime: new Date(),
+      endTime: new Date()
+    };
 
     $scope.addNewProject = function() {
 
@@ -18,30 +24,12 @@ angular.module('myProjects.overview', [])
       $scope.project = {};
       $("div.svg").children().remove();
       makeGanttChart('Projects Overview', data.projects);
-      
+
       // post to server
+      console.log(JSON.stringify(newProject));
       Projects.addNewProject(JSON.stringify(newProject));
 
     };
-
-    // $scope.addNewProject = function() {
-
-    //   var newProject = {
-    //     task: $scope.project.projectName,
-    //     // description: $scope.project.projectName + " ",
-    //     startTime: convert(JSON.stringify($scope.project.startTime)),
-    //     endTime: convert(JSON.stringify($scope.project.endTime)),
-    //     details: ""
-    //   };
-
-    //   // add to database
-    //   data.projects.unshift(newProject);
-    //   $scope.project = {};
-
-    //   // add to GanttChart
-    //   $("div.svg").children().remove();
-    //   makeGanttChart('Projects Overview', data.projects);
-    // };
 
     $scope.setCurrentProject = function(projectName) {
       window.localStorage.currentProject = projectName; // TODO: change to express-session

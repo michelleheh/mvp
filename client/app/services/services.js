@@ -16,7 +16,7 @@ angular.module('myProjects.services', [])
       url: '/api/projects',
       data: newProject
     }).then(function(res) {
-      console.log('addNewProject got response back', res);
+      console.log('++> addNewProject got response back: ', res);
     });
   };
 

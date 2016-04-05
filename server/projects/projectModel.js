@@ -3,8 +3,8 @@ var mongoose = require('mongoose');
 var projectSchema = new mongoose.Schema({
   task: String,
   description: String,
-  startTime: Date,
-  endTime: Date,
+  startTime: String,
+  endTime: String,
   details: String
 });
 
