@@ -23,15 +23,15 @@
       <label>Project Name: </label>
       <input type="text" class="form-control" ng-model="project.projectName">
       <label>Starting Date: </label>
-      <input type="date" class="form-control" ng-model="project.startDate">
+      <input type="date" class="form-control" ng-model="project.startTime">
       <label>Finish Date: </label>
-      <input type="date" class="form-control" ng-model="project.endDate">
+      <input type="date" class="form-control" ng-model="project.endTime">
       <button type="submit" class="btn btn-default">Add Project</button>
     </form>
 
-    <div id = "container">
-      <div class = "svg"></div>
-      <div id = "tag"></div>
+    <div id="container">
+      <div class="svg"></div>
+      <div id="tag"></div>
     </div>
 
     <!-- <div class="row">
@@ -39,16 +39,22 @@
         <div class="thumbnail" ng-repeat="project in projects track by $index">
           <div class="caption">
             <a href="#/project"  ng-click="setCurrentProject(project.projectName)">{{project.projectName}}</a>
-            <p>Starting Date: {{project.startDate}}</p>
-            <p>Finish Date: {{project.endDate}}</p>
+            <p>Starting Date: {{project.startTime}}</p>
+            <p>Finish Date: {{project.endTime}}</p>
           </div>
         </div>
       </div>
     </div> -->
   </div>
 
-</div>
+  <pre>
+    <div>
+      {{projects}}
+      
+    </div>
+      {{project.projectName}}
+      {{project.startTime}}
+      {{project.endTime}}
+  </pre>
 
-<pre>
-{{project.projectName}}
-</pre>
+</div>

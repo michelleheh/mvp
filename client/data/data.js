@@ -4,22 +4,22 @@ data.projects = [
   {
     task: "Wedding",
     description: "Wedding Planner",
-    startTime: "2016-1-6 0:0",
-    endTime: "2016-1-9 10:10",
+    startTime: "2016-04-06 00:00",
+    endTime: "2016-04-09 10:10",
     details: "lots to do"
   },
   {
     task: "Kitchen Remodeling",
     description: "Kitchen Remodeling",
-    startTime: "2016-1-7 8:12",
-    endTime: "2016-1-14 9:30",
+    startTime: "2016-4-7 08:12",
+    endTime: "2016-4-14 09:30",
     details: ""
   },
   {
     task: "Band Practice",
     description: "Band Practice",
-    startTime: "2016-1-10 8:24",
-    endTime: "2016-1-12 18:24",
+    startTime: "2016-4-10 8:24",
+    endTime: "2016-4-12 18:24",
     details: ""
   },
 ];
