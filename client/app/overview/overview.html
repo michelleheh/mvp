@@ -6,13 +6,13 @@
         <a class="selected" href="#/overview">overview</a>
       </li>
       <li>
-        <a href="#/projects">projects</a>
+        <a href="#/project">project</a>
       </li>
       <li>
-        <a href="#/tasks">tasks</a>
+        <a href="#/task">task</a>
       </li>
       <li>
-        <a href="#/notes">notes</a>
+        <a href="#/note">note</a>
       </li>
     </ul>
   </nav>
@@ -27,17 +27,17 @@
       <button>add project</button>
     </form>
 
-    <div> 
+    <div>
       <ul name="projectList">
         <li ng-repeat="project in projects track by $index">
-          <a href="#/projects"  ng-click="setCurrentProject(project.projectName)">{{project.projectName}}</a>
+          <a href="#/project"  ng-click="setCurrentProject(project.projectName)">{{project.projectName}}</a>
           <p>Starting Date: {{project.startingDate}}</p>
           <p>Finish Date: {{project.finishDate}}</p>
         </li>
       </ul>
     </div>
-
   </div>
+
 </div>
 
 <pre>

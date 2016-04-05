@@ -1,0 +1,42 @@
+<div id="container">
+<!-- Navigation Panel -->
+  <nav class="navigation">
+    <ul>
+      <li>
+        <a href="#/overview">overview</a>
+      </li>
+      <li>
+        <a class="selected" href="#/project">project</a>
+      </li>
+      <li>
+        <a href="#/task">task</a>
+      </li>
+      <li>
+        <a href="#/note">note</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- Projects Panel -->
+  <div class="projects">
+    
+    <h3>Current Project: {{currentProject}}</h3>
+
+    <form name="addTask" ng-submit="addNewTask()" novalidate>
+      <input type="text" ng-model="task.taskName">Task Name</input>
+      <input type="date" ng-model="task.startingDate">Starting Date</input>
+      <input type="date" ng-model="task.finishDate">Finish Date</input>
+      <button>add task</button>
+    </form>
+
+    <div>
+      <ul name="taskList">
+        <li ng-repeat="task in tasks track by $index">
+          <a href="#/tasks"  ng-click="setCurrentTask(task.taskName)">{{task.taskName}}</a>
+          <p>Starting Date: {{task.startingDate}}</p>
+          <p>Finish Date: {{task.finishDate}}</p>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>

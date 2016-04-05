@@ -34,6 +34,23 @@ data.projects = [
     ]
   },
 ];
+
+data.tasks = [
+  { 
+    taskID: 01, 
+    taskName: 'pick a dress',
+    startingDate: '2016-02-01',
+    finishDate: '2015-02-03'
+  },
+  { 
+    taskID: 02, 
+    taskName: 'desing wedding scheme',
+    startingDate: '2016-02-01',
+    finishDate: '2015-02-03'
+  },
+
+];
+
   // {
   //   user: 'Michelle',
   //   projects: [

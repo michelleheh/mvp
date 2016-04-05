@@ -9,7 +9,7 @@ angular.module('myProjects.overview', [])
     };
 
     $scope.setCurrentProject = function(projectName) {
-      window.localStorage.currentProject = projectName;
+      window.localStorage.currentProject = projectName; // TODO: change to express-session
     };
 
   }]);
