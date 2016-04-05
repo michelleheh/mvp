@@ -2,6 +2,7 @@ angular.module('myProjects', [
   'myProjects.services',
   'myProjects.overview',
   'myProjects.project',
+  'myProjects.task',
   'ngRoute'
 ]).
 config(['$routeProvider', function($routeProvider) {
@@ -16,7 +17,7 @@ config(['$routeProvider', function($routeProvider) {
     }).
     when('/task', {
       templateUrl: 'app/task/task.html',
-      // controller: 'taskController'
+      controller: 'taskController'
     }).
     when('/note', {
       templateUrl: 'app/note/note.html',
