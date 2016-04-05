@@ -1,6 +1,6 @@
 // http://codepen.io/pascal_lacroix/pen/JfhIs
 
-var makeGanttChart = function(title, taskArray, colorScheme) {
+var makeGanttChart = function(title, taskArray, colorScheme, redirect) {
 
   var w = window.outerWidth;
   var h = 500;
@@ -129,35 +129,35 @@ var makeGanttChart = function(title, taskArray, colorScheme) {
       .attr("text-height", theBarHeight)
       .attr("fill", "#fff");
 
-    rectText.on('mouseover', function(e) {
-      // console.log(this.x.animVal.getItem(this));
-      var tag = "";
+    // rectText.on('mouseover', function(e) {
+    //   // console.log(this.x.animVal.getItem(this));
+    //   var tag = "";
 
-      if (d3.select(this).data()[0].details !== undefined) {
-        tag = "Task: " + d3.select(this).data()[0].task + "<br/>" +
-          "Description: " + d3.select(this).data()[0].description + "<br/>" +
-          "Start: " + d3.select(this).data()[0].startTime + "<br/>" +
-          "End: " + d3.select(this).data()[0].endTime + "<br/>" +
-          "Details: " + d3.select(this).data()[0].details;
-      } else {
-        tag = "Task: " + d3.select(this).data()[0].task + "<br/>" +
-          "Description: " + d3.select(this).data()[0].description + "<br/>" +
-          "Start: " + d3.select(this).data()[0].startTime + "<br/>" +
-          "End: " + d3.select(this).data()[0].endTime;
-      }
-      var output = document.getElementById("tag");
+    //   if (d3.select(this).data()[0].details !== undefined) {
+    //     tag = "Task: " + d3.select(this).data()[0].task + "<br/>" +
+    //       "Description: " + d3.select(this).data()[0].description + "<br/>" +
+    //       "Start: " + d3.select(this).data()[0].startTime + "<br/>" +
+    //       "End: " + d3.select(this).data()[0].endTime + "<br/>" +
+    //       "Details: " + d3.select(this).data()[0].details;
+    //   } else {
+    //     tag = "Task: " + d3.select(this).data()[0].task + "<br/>" +
+    //       "Description: " + d3.select(this).data()[0].description + "<br/>" +
+    //       "Start: " + d3.select(this).data()[0].startTime + "<br/>" +
+    //       "End: " + d3.select(this).data()[0].endTime;
+    //   }
+    //   var output = document.getElementById("tag");
 
-      var x = this.x.animVal.getItem(this) + "px";
-      var y = this.y.animVal.getItem(this) + 25 + "px";
+    //   var x = this.x.animVal.getItem(this) + "px";
+    //   var y = this.y.animVal.getItem(this) + 25 + "px";
 
-      output.innerHTML = tag;
-      output.style.top = y;
-      output.style.left = x;
-      output.style.display = "block";
-    }).on('mouseout', function() {
-      var output = document.getElementById("tag");
-      output.style.display = "none";
-    });
+    //   output.innerHTML = tag;
+    //   output.style.top = y;
+    //   output.style.left = x;
+    //   output.style.display = "block";
+    // }).on('mouseout', function() {
+    //   var output = document.getElementById("tag");
+    //   output.style.display = "none";
+    // });
 
     innerRects.on('mouseover', function(e) {
       //console.log(this);
@@ -188,6 +188,11 @@ var makeGanttChart = function(title, taskArray, colorScheme) {
       var output = document.getElementById("tag");
       output.style.display = "none";
 
+    }).on("click", function(event) {
+      console.log("box is clicked! this is the event: ", event);
+      window.location = redirect;
+      // window.location = "https://www.google.com/";
+      d3.event.stopPropagation();
     });
 
   }
