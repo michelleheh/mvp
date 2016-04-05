@@ -1,16 +1,22 @@
 var express = require('express');
 var mongoose = require('mongoose');
+var path = require('path');
 
 var app = express();
 
-// mongoose.connect('mongodb://localhost/myProjects');
+mongoose.connect('mongodb://localhost/myProjects');
 
-app.get('/', function(req, res) {
-  res.send('Hello World!');
-});
 
-app.listen(3000, function(req, res) {
-  console.log('myProjects app listening on port 3000!');
+//serving a static folder
+app.use(express.static(path.join(__dirname, '..', 'client')));
+
+// configure server with middleware and routes
+// require('./config/middleware.js')(app, express);
+require('./config/routes.js')(app, express);
+
+app.listen(8000, function(req, res) {
+  console.log('myProjects app listening on port 8000!');
+  console.log(path.join(__dirname, '..', 'client'));
 });
 
 // module.exports = app;
