@@ -1,6 +1,6 @@
 // http://codepen.io/pascal_lacroix/pen/JfhIs
 
-var makeGanttChart = function(title, taskArray) {
+var makeGanttChart = function(title, taskArray, colorScheme) {
 
   var w = window.outerWidth;
   var h = 500;
@@ -53,7 +53,7 @@ var makeGanttChart = function(title, taskArray) {
 
     var colorScale = d3.scale.linear()
       .domain([0, categories.length])
-      .range(["#00B9FA", "#F95002"])
+      .range(colorScheme)
       .interpolate(d3.interpolateHcl);
 
     makeGrid(sidePadding, topPadding, pageWidth, pageHeight);

@@ -23,7 +23,7 @@ angular.module('myProjects.overview', [])
       data.projects.unshift(newProject);
       $scope.project = {};
       $("div.svg").children().remove();
-      makeGanttChart('Projects Overview', data.projects);
+      makeGanttChart('Projects Overview', data.projects, ["#9900FF", "#6600FF"]);
 
       // post to server
       Projects.addNewProject(JSON.stringify(newProject));
@@ -38,6 +38,6 @@ angular.module('myProjects.overview', [])
     };
 
     // initiate with a Gantt Chart
-    makeGanttChart('Projects Overview', data.projects);
+    makeGanttChart('Projects Overview', data.projects, ["#9900FF", "#6600FF"]);
 
   }]);

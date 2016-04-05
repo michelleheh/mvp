@@ -28,7 +28,7 @@ angular.module('myProjects.project', [])
       data.tasks.unshift(newTask);
       $scope.task = defaultTask;
       $("div.svg").children().remove();
-      makeGanttChart('Tasks Overview', data.tasks);
+      makeGanttChart('Tasks Overview', data.tasks, ["#F95002", "#00B9FA"]);
 
       // post to server
       // Tasks.addNewProject(JSON.stringify(newProject));
@@ -42,6 +42,6 @@ angular.module('myProjects.project', [])
       return outputTime;
     };
     // initiate with a Gantt Chart
-    makeGanttChart('Tasks Overview', data.tasks);
+    makeGanttChart('Tasks Overview', data.tasks, ["#F95002", "#00B9FA"]);
 
   }]);
