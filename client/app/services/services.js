@@ -1,11 +1,11 @@
 angular.module('myProjects.services', [])
 .factory('Projects', function($http) {
 
-  var getTest = function() {
+  var getAllProjects = function() {
     console.log('fired');
     $http({
       method: 'GET', 
-      url: 'http://localhost:3000/'
+      url: '/api/projects'
     }).then(function(res) {
       console.log(res);
     });    

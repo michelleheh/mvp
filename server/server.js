@@ -6,7 +6,6 @@ var app = express();
 
 mongoose.connect('mongodb://localhost/myProjects');
 
-
 //serving a static folder
 app.use(express.static(path.join(__dirname, '..', 'client')));
 
