@@ -4,7 +4,7 @@ angular.module('myProjects.overview', [])
     $scope.projects = data.projects; // TODO setup request to server
     //default values in form
     $scope.project = {
-      projectName: "New Project Here",
+      projectName: "Build a Rock Chair",
       startTime: new Date(),
       endTime: new Date()
     };
@@ -26,16 +26,9 @@ angular.module('myProjects.overview', [])
       makeGanttChart('Projects Overview', data.projects);
 
       // post to server
-      console.log(JSON.stringify(newProject));
       Projects.addNewProject(JSON.stringify(newProject));
 
     };
-
-    $scope.setCurrentProject = function(projectName) {
-      window.localStorage.currentProject = projectName; // TODO: change to express-session
-    };
-
-    // var inputTime = "2016-04-13T07:00:00.000Z";
 
     var convert = function(inputTime) {
       var outputTime = inputTime.replace("T", " ");

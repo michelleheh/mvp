@@ -33,10 +33,17 @@ data.tasks = [
     details: ""
   },
   {
-    task: "pic material",
+    task: "pick theme",
     description: "pic material",
     startTime: "2016-04-08 00:00",
     endTime: "2016-04-10 10:10",
+    details: ""
+  },
+  {
+    task: "work with florist",
+    description: "work with florist",
+    startTime: "2016-04-11 00:00",
+    endTime: "2016-04-13 10:10",
     details: ""
   }
 ];

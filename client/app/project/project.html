@@ -23,27 +23,20 @@
       <label>Task Name: </label>
       <input type="text" class="form-control" ng-model="task.taskName">
       <label>Starting Date: </label>
-      <input type="date" class="form-control" ng-model="task.startDate">
+      <input type="date" class="form-control" ng-model="task.startTime">
       <label>Finish Date: </label>
-      <input type="date" class="form-control" ng-model="task.endDate">
+      <input type="date" class="form-control" ng-model="task.endTime">
       <button type="submit" class="btn btn-default" >Add Task</button>
     </form>
 
-    <h3>Current Project: {{currentProject}}</h3>
-
-    <div>
-      <ul name="taskList">
-        <li ng-repeat="task in tasks track by $index">
-          <a href="#/tasks"  ng-click="setCurrentTask(task.taskName)">{{task.taskName}}</a>
-          <p>Starting Date: {{task.startDate}}</p>
-          <p>Finish Date: {{task.endDate}}</p>
-        </li>
-      </ul>
+    <div id="container">
+      <div class="svg"></div>
+      <div id="tag"></div>
     </div>
 
   </div>
-</div>
 
-<pre>
-  <button ng-click="logIt()">test connection</button>
-</pre>
+  <pre>
+  </pre>
+
+</div>
