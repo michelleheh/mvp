@@ -13,9 +13,16 @@ app.use(express.static(path.join(__dirname, '..', 'client')));
 // require('./config/middleware.js')(app, express);
 require('./config/routes.js')(app, express);
 
+// request handllers
+app.post('/api/projects', function(req, res) {
+  console.log('-------> got a post request to projects');
+  res.send('hello world');
+});
+
+
+
 app.listen(8000, function(req, res) {
   console.log('myProjects app listening on port 8000!');
-  console.log(path.join(__dirname, '..', 'client'));
 });
 
 // module.exports = app;
