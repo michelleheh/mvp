@@ -9,10 +9,8 @@ module.exports = function (app, express) {
   });
 
   app.post('/api/projects', function(req, res) {
-    console.log('-------> got a post request to projects');
-    // connnect to database and post a project
-    // respond with OK 200
-    res.json({});
+    console.log('-------> got a post request to projects in routes');
+    res.send('hello world');
   });
 
 };

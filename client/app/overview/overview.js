@@ -7,12 +7,19 @@ angular.module('myProjects.overview', [])
 
       var newProject = {
         task: $scope.project.projectName,
-        // description: $scope.project.projectName + " ",
-        startTime: convert($scope.project.startTime),
-        endTime: convert($scope.project.endTime),
+        description: $scope.project.projectName + " ",
+        startTime: convert(JSON.stringify($scope.project.startTime)),
+        endTime: convert(JSON.stringify($scope.project.endTime)),
         details: ""
       };
 
+      // update Gannt chart
+      data.projects.unshift(newProject);
+      $scope.project = {};
+      $("div.svg").children().remove();
+      makeGanttChart('Projects Overview', data.projects);
+      
+      // post to server
       Projects.addNewProject(JSON.stringify(newProject));
 
     };
