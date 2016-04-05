@@ -7,7 +7,7 @@ config(['$routeProvider', function($routeProvider) {
     }).
     when('/projects', { // TODO: add :projetID
       templateUrl: 'app/projects/projects.html',
-      // controller: 'projectsController'
+      controller: 'projectsController'
     }).
     when('/tasks', {
       templateUrl: 'app/tasks/tasks.html',

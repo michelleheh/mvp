@@ -2,6 +2,7 @@ var data = {};
 
 data.projects = [
   {
+    projectID: 01,
     projectName: 'wedding planning',
     startingDate: '2016-02-01',
     finishDate: '2016-02-03',
@@ -17,6 +18,7 @@ data.projects = [
     ]
   },
   {
+    projectID: 02,
     projectName: 'band performance',
     startingDate: '2016-02-01',
     finishDate: '2015-02-03',
