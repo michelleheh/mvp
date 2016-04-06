@@ -13,7 +13,6 @@ angular.module('myProjects.project', [])
 
     $scope.task = defaultTask;
 
-
     $scope.addNewTask = function() {
 
       var newTask = {

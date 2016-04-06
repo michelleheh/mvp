@@ -31,8 +31,8 @@
 
     <!-- Note Thumnails-->
     <div class="row">
-      <div class="col-sm-6 col-md-3" name="noteList">
-        <div ng-repeat="note in notes track by $index">
+      <div class="container-fluid" name="noteList">
+        <div class="col-xs-6 col-sm-3" ng-repeat="note in notes track by $index">
           <div class="thumbnail">
             <!-- <a href="#/project"  ng-click="setCurrentProject(project.projectName)">{{project.projectName}}</a> -->
             <img src={{note.url}}>
@@ -44,12 +44,5 @@
     </div>
 
   </div>
-
-  <pre>
-    <div>
-      {{notes}}
-
-    </div>
-  </pre>
 
 </div>

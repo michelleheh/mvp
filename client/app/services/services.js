@@ -2,11 +2,12 @@ angular.module('myProjects.services', [])
 .factory('Projects', function($http) {
 
   var getAllProjects = function() {
-    $http({
+    // console.log('getAllProjects fired in services');
+    return $http({
       method: 'GET', 
       url: '/api/projects'
     }).then(function(res) {
-      console.log('getAllProjects response: ', res);
+      return res;
     });    
   };
 

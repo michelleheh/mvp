@@ -2,9 +2,23 @@ angular.module('myProjects.overview', [])
   .controller('overviewController', ['$scope', 'Projects', function($scope, Projects) {
 
     $scope.projects = data.projects; // TODO setup request to server
+    // $scope.projects = Projects.getAllProjects();
+
+    var init = function() {
+      Projects.getAllProjects()
+        .then(function(projects) {
+          console.log('overviewController is getting response: ', projects.data);
+          console.log('working', $scope.projects);
+          $scope.projects = projects.data;
+          makeGanttChart('Projects Overview', $scope.projects, ["#9900FF", "#6600FF"], "#/project");
+        });
+    };
+
+    init();
+
     //default values in form
     $scope.project = {
-      projectName: "Build a Rock Chair",
+      projectName: "Build a Rocking Chair",
       startTime: new Date(),
       endTime: new Date()
     };
@@ -20,13 +34,14 @@ angular.module('myProjects.overview', [])
       };
 
       // update Gannt chart
-      data.projects.unshift(newProject);
-      $scope.project = {};
-      $("div.svg").children().remove();
-      makeGanttChart('Projects Overview', data.projects, ["#9900FF", "#6600FF"], "#/project");
+      // $scope.project = {};
+      // $scope.projects.unshift(newProject);
+      // makeGanttChart('Projects Overview', $scope.projects, ["#9900FF", "#6600FF"], "#/project");
 
       // post to server
       Projects.addNewProject(JSON.stringify(newProject));
+      $("div.svg").children().remove();
+      init();
 
     };
 
@@ -37,7 +52,7 @@ angular.module('myProjects.overview', [])
       return outputTime;
     };
 
-    // initiate with a Gantt Chart
-    makeGanttChart('Projects Overview', data.projects, ["#9900FF", "#6600FF"], "#/project");
+    // // initiate with a Gantt Chart
+    // makeGanttChart('Projects Overview', data.projects, ["#9900FF", "#6600FF"], "#/project");
 
   }]);
