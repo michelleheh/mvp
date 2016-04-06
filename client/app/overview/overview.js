@@ -18,7 +18,7 @@ angular.module('myProjects.overview', [])
 
     //default values in form
     $scope.project = {
-      projectName: "Build a Rocking Chair",
+      projectName: "Make a drome",
       startTime: new Date(),
       endTime: new Date()
     };
