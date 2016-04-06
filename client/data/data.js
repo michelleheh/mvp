@@ -50,6 +50,11 @@ data.tasks = [
 
 data.notes = [
   {
+    noteTitle: "Lacy Dresses",
+    text: "latest trend",
+    url: "http://www.essensedesigns.com/wp-content/uploads/2015/12/6220.1449597459.0-530x845.jpg"
+  },
+  {
     noteTitle: "Practice Piano",
     text: "Step 1: Getting Familiar with Your Notes. ...\n Step 2: Getting Familiar with the Piano Keys. ...",
     url: "https://i.ytimg.com/vi/4gka7wq0-Ss/maxresdefault.jpg"
